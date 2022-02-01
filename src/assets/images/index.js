@@ -1,0 +1,1 @@
+export {default as backgroundVideoLogin} from './background-login.mp4'
