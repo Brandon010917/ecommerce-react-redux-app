@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("./LiberationSans-Italic.ttf"), local("LiberationSans-Italic");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Teimer";
+  src: url("./LiberationSans-Regular.ttf"), local("LiberationSans-Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Teimer";
+  src: url("./LiberationSans-Bold.ttf"), local("LiberationSans-Bold");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Teimer";
+  src: url("./LiberationSans-BoldItalic.ttf"),
+    local("LiberationSans-BoldItalic");
+  font-weight: bold;
+  font-style: italic;
+}
