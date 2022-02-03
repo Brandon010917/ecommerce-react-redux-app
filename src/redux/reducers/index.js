@@ -16,7 +16,7 @@ const reducer = (state = INITAL_STATE, action) => {
         productsList: action.payload,
       };
 
-    case actions.setProductsCategories:
+    case actions.setCategories:
       return {
         ...state,
         categories: action.payload,

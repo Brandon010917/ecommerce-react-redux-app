@@ -23,8 +23,8 @@ export const setError = (error) => ({
   payload: error,
 });
 
-export const setProductsCategories = (categories) => ({
-  type: actions.setProductsCategories,
+export const setCategories = (categories) => ({
+  type: actions.setCategories,
   payload: categories,
 });
 
@@ -47,7 +47,7 @@ export const getProductsListThunk = () => {
   };
 };
 
-export const getProductsCategoriesThunk = () => {
+export const getCategoriesThunk = () => {
   return (dispatch) => {
     dispatch(setIsLoading(true));
     axios
@@ -55,7 +55,7 @@ export const getProductsCategoriesThunk = () => {
         "https://ecommerce-exercise-backend.herokuapp.com/categories/",
         config()
       )
-      .then(({ data }) => dispatch(setProductsCategories(data)))
+      .then(({ data }) => dispatch(setCategories(data)))
       .catch(({ response }) => dispatch(setError(response.data)))
       .finally(() => dispatch(setIsLoading(false)));
   };

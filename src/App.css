@@ -140,8 +140,63 @@
 
 /* ======== Home ======== */
 .hero-image {
-  background-image: url(./assets/images/background-hero.jpg);
+  filter: invert(0.07);
+}
+
+.hero-container {
+  padding: 0 5vw 5vw;
+  height: 78vh;
+  background-image: url(./assets//images/background-hero.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
   background-size: cover;
+  background-attachment: scroll;
+  background-position: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    height: 73vh;
+  }
+}
+
+.home-story {
+  background-color: #f2efe3;
+  margin-top: 5vw;
+}
+
+.story-details {
+  padding-top: calc(40vmax / 5);
+  padding-bottom: 5vw;
+}
+
+.home-gallery-top {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.luxury {
+  padding-top: 6.6vmax;
+  padding-bottom: 6.6vmax;
+}
+
+.effortless-pieces {
+  padding-top: 6.6vmax;
+  padding-bottom: 6.6vmax;
+  background-image: url("./assets/images/background-hero-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.newsletter {
+  background-color: #f2efe3;
+  padding-top: 6.6vmax;
+  padding-bottom: 5vw;
+}
+
+.home-gallery-bottom {
+  background-color: #f2efe3;
+  padding-top: 6.6vmax;
+  padding-bottom: 5vw;
 }
