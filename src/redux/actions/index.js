@@ -47,6 +47,20 @@ export const getProductsListThunk = () => {
   };
 };
 
+export const filterByCategoryThunk = (id) => {
+  return (dispatch) => {
+    dispatch(setIsLoading(true));
+    axios
+      .get(
+        `https://ecommerce-exercise-backend.herokuapp.com/products/?category=${id}`,
+        config()
+      )
+      .then(({ data }) => dispatch(setProductsList(data)))
+      .catch(({ response }) => dispatch(setError(response.data)))
+      .finally(() => dispatch(setIsLoading(false)));
+  };
+};
+
 export const getCategoriesThunk = () => {
   return (dispatch) => {
     dispatch(setIsLoading(true));

@@ -124,7 +124,7 @@
   width: 35px;
 }
 
-.categories {
+.pages {
   margin-top: 2vw;
 }
 
@@ -199,4 +199,35 @@
   background-color: #f2efe3;
   padding-top: 6.6vmax;
   padding-bottom: 5vw;
+}
+
+/* ======== Shop ======== */
+.main-shop {
+  padding-top: 6.6vmax;
+  padding-bottom: 5vw;
+}
+
+@media screen and (min-width: 768px) {
+  .main-shop {
+    padding-top: 3vmax;
+  }
+}
+
+.categories {
+  margin: 4vw 0;
+}
+
+.category-btn {
+  padding: 0 1.5vw;
+}
+
+.products-grid {
+  gap: 4vw;
+}
+
+/* ======== Footer ======== */
+.footer {
+  background-color: #f2efe3;
+  padding-top: 5vw;
+  padding-bottom: 6.6vmax;
 }

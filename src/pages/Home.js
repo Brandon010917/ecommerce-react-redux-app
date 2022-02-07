@@ -1,25 +1,10 @@
-import { useEffect } from "react";
-
-//Redux
-import { useDispatch } from "react-redux";
-
-//Actions
-import { getCategoriesThunk, getProductsListThunk } from "../redux/actions";
+//React.router-dom
 import { Link } from "react-router-dom";
 
 //Components
 import Sliders from "../components/Sliders";
 
 const Home = () => {
-  //Redux-hooks
-  const dispatch = useDispatch();
-
-  //Effect
-  useEffect(() => {
-    dispatch(getProductsListThunk());
-    dispatch(getCategoriesThunk());
-  }, [dispatch]);
-
   return (
     <div className="font-literation">
       <div className="container-content">
@@ -100,12 +85,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="effortless-pieces lg:min-h-screen">
-        <div className="container-content text-white">
-          <div className="p-4 pt-0 lg:p-0">
+      <div className="effortless-pieces flex justify-between lg:min-h-screen">
+        <div className="container-content text-white flex-grow">
+          <div className="p-4 pt-0 lg:p-0 h-full flex flex-col">
             <h2 className="text-3xl mb-4">Effortless pieces, timeless style</h2>
-            <div className="grid grid-cols-12">
-              <div className="md:col-span-9 pr-4">
+            <div className="grid grid-cols-12 h-full flex-grow">
+              <div className="col-span-12 md:col-span-9 pr-4 self-center">
                 <div className="w-5/12">
                   <p className="mb-8 text-sm">
                     We design each of our collections with the intention of
@@ -113,12 +98,12 @@ const Home = () => {
                     with minimal waste and minimal carbon footprint.
                   </p>
 
-                  <button className="border-2 border-white py-2.5 px-4 font-sans hover:bg-white hover:text-black transition-colors">
+                  <button className="border-2 border-white py-2.5 px-4 font-sans text-xl hover:bg-white hover:text-black transition-colors">
                     <Link to="/shop">Shop Now</Link>
                   </button>
                 </div>
               </div>
-              <div className="md:col-span-3 pl-4">
+              <div className="col-span-12 md:col-span-3 pl-4">
                 <Sliders />
               </div>
             </div>
@@ -129,15 +114,15 @@ const Home = () => {
       <div className="newsletter">
         <div className="container-content">
           <div className="grid grid-cols-12">
-            <div className="col-span-8">
+            <div className="col-span-12 md:col-span-8">
               <h3 className="font-teimer text-3xl mb-7">Newsletter</h3>
               <p className="text-sm">
                 Be the first to know about our new collection <br /> launches,
                 special offers & other updates.
               </p>
             </div>
-            <div className="col-span-4 p-4 pt-0 text-sm">
-              <form className="mb-4 flex items-center">
+            <div className="col-span-12 md:col-span-4 md:p-4 pt-0 text-sm">
+              <form className="mb-4 flex flex-wrap items-center">
                 <div className="mt-4 py-2 pr-1">
                   <input
                     type="email"

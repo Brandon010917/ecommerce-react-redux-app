@@ -61,7 +61,6 @@ const Header = () => {
           <i className="fab fa-pinterest text-xl cursor-pointer"></i>
         </div>
         {/* Title */}
-
         <div className="animate__animated animate__fadeIn animate__slower w-1/2 flex flex-col items-center">
           <h1 className="font-teimer text-4xl">Anise</h1>
           <div className="hidden md:block font-literation">
