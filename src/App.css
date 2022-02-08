@@ -225,6 +225,31 @@
   gap: 4vw;
 }
 
+/* ======== Product Detail ======== */
+
+.product-detail {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.product-detail-grid {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-detail-grid {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
+
+/* ======== Cart ======== */
+.cart {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
 /* ======== Footer ======== */
 .footer {
   background-color: #f2efe3;

@@ -5,13 +5,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 
 //Actions
-import { setError } from "../../redux/actions";
-
-//React-router-dom
-import { useNavigate } from "react-router-dom";
-
-//Axios
-import axios from "axios";
+import { signUpUserThunk } from "../../redux/actions";
 
 //Components
 import Error from "../Error";
@@ -28,18 +22,9 @@ const FormSignUp = () => {
     formState: { errors },
   } = useForm();
 
-  //router-hooks
-  const navigate = useNavigate();
-
   //Functions
   const handleUserSignUp = (user) => {
-    axios
-      .post("https://ecommerce-exercise-backend.herokuapp.com/users/", user)
-      .then(() => {
-        navigate("/signin");
-        dispatch(setError(null));
-      })
-      .catch(({ response }) => dispatch(setError(response.data)));
+    dispatch(signUpUserThunk(user));
   };
 
   return (

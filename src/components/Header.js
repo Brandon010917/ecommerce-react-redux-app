@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 //React-router-dom
 import { Link } from "react-router-dom";
 
+//Redux
+import { useSelector } from "react-redux";
+
 //Components
 import LinkPages from "./LinkPages";
 
@@ -10,6 +13,9 @@ const Header = () => {
   //State
   const [isOpenNav, setIsOpenNav] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
+
+  //Redux-hooks
+  const cart = useSelector((state) => state.cart);
 
   //Effect
   useEffect(() => {
@@ -34,6 +40,10 @@ const Header = () => {
       setIsOpenNav(false);
     }
   }, [width]);
+
+  const totalProducts =
+    cart.length > 0 &&
+    cart.map((product) => product.quantity).reduce((prev, curr) => prev + curr);
 
   return (
     <header
@@ -75,7 +85,9 @@ const Header = () => {
               <i className="fas fa-shopping-cart text-gray-600"></i>
             </Link>
           </button>
-          <span className="absolute -top-2 -right-0.5 p-1 text-xs">0</span>
+          <span className="absolute -top-2.5 -right-0.5 p-1 text-xs">
+            {totalProducts || 0}
+          </span>
         </div>
       </div>
       {/* Navbar Mobile */}

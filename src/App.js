@@ -1,7 +1,9 @@
 import "./App.css";
 
 //React-ruoter-dom
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import history from "./utils/history";
+import CustomRouter from "./components/CustomRouter";
 
 //Redux
 import { useSelector } from "react-redux";
@@ -18,6 +20,14 @@ import {
   Shop,
 } from "./pages";
 
+/* const App = () => {
+		return (
+				<CustomRouter history={history}>
+						...
+        </CustomRouter>
+		)
+} */
+
 //Layout
 import MainLayout from "./layouts/MainLayout";
 
@@ -30,7 +40,7 @@ function App() {
   const isLoading = useSelector((state) => state.isLoading);
 
   return (
-    <HashRouter>
+    <CustomRouter history={history}>
       {isLoading && <Loader />}
 
       <Routes>
@@ -49,7 +59,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
-    </HashRouter>
+    </CustomRouter>
   );
 }
 

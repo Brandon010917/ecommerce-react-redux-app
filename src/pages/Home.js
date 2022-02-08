@@ -1,10 +1,27 @@
+import { useEffect } from "react";
+
 //React.router-dom
 import { Link } from "react-router-dom";
 
+//Redux
+import { useDispatch, useSelector } from "react-redux";
+
+//Actions
+import { getProductsListThunk } from "../redux/actions";
+
 //Components
-import Sliders from "../components/Sliders";
+import ProductSlider from "../components/ProductSlider";
 
 const Home = () => {
+  //Redux-hooks
+  const productsList = useSelector((state) => state.productsList);
+  const dispatch = useDispatch();
+
+  //Effect
+  useEffect(() => {
+    dispatch(getProductsListThunk());
+  }, [dispatch]);
+
   return (
     <div className="font-literation">
       <div className="container-content">
@@ -104,7 +121,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-3 pl-4">
-                <Sliders />
+                <ProductSlider images={productsList[0]?.images} />
               </div>
             </div>
           </div>
