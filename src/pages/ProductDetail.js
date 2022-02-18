@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
-
 //React-router-dom
 import { useParams } from "react-router-dom";
-
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-
 //Actions
 import {
   addToCartThunk,
@@ -15,7 +12,7 @@ import {
 
 //Components
 import ProductsList from "../components/ProductsList";
-import ProductSlider from "../components/ProductSlider";
+import ProductSlider from "../components/Custom/ProductSlider";
 
 const ProductDetail = () => {
   //State
@@ -59,9 +56,12 @@ const ProductDetail = () => {
         <div className="container-content font-literation">
           <div className="product-detail">
             <div className="product-detail-grid grid md:grid-cols-2">
+              {/* Column left */}
               <div className="col-span-full md:col-span-1 mb-5">
-                <ProductSlider images={productDetail?.images} />
+                <ProductSlider images={productDetail?.images || []} />
               </div>
+
+              {/* Column rigth */}
               <div className="col-span-full md:col-span-1 flex flex-col items-center justify-center md:pt-14 md:pl-14 lg:pl-20">
                 <h2 className="mb-6 font-teimer text-xl">
                   {productDetail.name}
@@ -70,6 +70,7 @@ const ProductDetail = () => {
                 <p className="mb-12 text-center text-sm">
                   {productDetail.description}
                 </p>
+                {/* Form */}
                 <form
                   onSubmit={addToCart}
                   className="flex flex-col items-center"
@@ -92,6 +93,8 @@ const ProductDetail = () => {
                 </form>
               </div>
             </div>
+
+            {/* Related products */}
             <div>
               <div className="col-span-full py-4 font-teimer text-2xl md:text-4xl">
                 *

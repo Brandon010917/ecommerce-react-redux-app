@@ -188,3 +188,18 @@ export const signUpUserThunk = (user) => {
       .finally(() => dispatch(setIsLoading(false)));
   };
 };
+
+export const checkoutThunk = (cart) => {
+  return (dispatch) => {
+    dispatch(setIsLoading(true));
+    axios
+      .post(
+        `https://ecommerce-exercise-backend.herokuapp.com/cart/buy/`,
+        cart,
+        config()
+      )
+      .then(() => dispatch(setCart([])))
+      .catch(({ response }) => dispatch(setError(response.data)))
+      .finally(() => dispatch(setIsLoading(false)));
+  };
+};

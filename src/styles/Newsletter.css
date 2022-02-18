@@ -1,0 +1,79 @@
+.newsletter {
+  background-color: #f2efe3;
+  padding-top: 6.6vmax;
+  padding-bottom: 5vw;
+}
+
+.newsletter__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.newsletter__left {
+  grid-column: span 12;
+}
+
+.newsletter__title {
+  font-family: "Teimer";
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.newsletter__left p {
+  font-size: 14px;
+}
+
+.newsletter__rigth {
+  grid-column: span 12;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.newsletter-form__wrapper {
+  width: 55%;
+  margin-top: 1rem;
+  padding: 0.5rem 0.25rem 0.5rem 0;
+}
+
+.newsletter-form__input {
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.newsletter-form__button {
+  width: 100%;
+  padding: 20px 30px;
+  border: 2px solid rgb(0, 0, 0);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-form__button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.newsletter__border-bottom {
+  grid-column: span 12;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .newsletter-form__wrapper {
+    width: 90%;
+  }
+
+  .newsletter__left {
+    grid-column: span 8;
+  }
+
+  .newsletter__rigth {
+    grid-column: span 4;
+  }
+}

@@ -3,7 +3,7 @@ import "./App.css";
 //React-ruoter-dom
 import { Routes, Route } from "react-router-dom";
 import history from "./utils/history";
-import CustomRouter from "./components/CustomRouter";
+import CustomRouter from "./components/Custom/CustomRouter";
 
 //Redux
 import { useSelector } from "react-redux";
@@ -32,8 +32,8 @@ import {
 import MainLayout from "./layouts/MainLayout";
 
 //Components
-import ProtectedRoutes from "./components/ProtectedRoutes";
-import Loader from "./components/Loader";
+import ProtectedRoutes from "./components/Custom/ProtectedRoutes";
+import Loader from "./components/Custom/Loader";
 
 function App() {
   //Redux-hooks

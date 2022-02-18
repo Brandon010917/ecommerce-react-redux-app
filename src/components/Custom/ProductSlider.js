@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-const SliderProduct = ({ images }) => {
+const ProductSlider = ({ images }) => {
   const [indexImage, setIndexImage] = useState(0);
   const widthImage = 100 / images.length;
 
@@ -9,34 +9,38 @@ const SliderProduct = ({ images }) => {
 
   //Functions
   const prev = () =>
-    setIndexImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setIndexImage((prev) => (prev === 0 ? images?.length - 1 : prev - 1));
 
   const next = () =>
-    setIndexImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setIndexImage((prev) => (prev === images?.length - 1 ? 0 : prev + 1));
 
   return (
     <div className="slider-container overflow-hidden relative">
       <p className="text-gray-800 absolute top-4 right-4 z-30 text-xs">
-        {indexImage + 1} / {images.length}
+        {indexImage + 1} / {images?.length}
       </p>
 
-      <div className="flex justify-between gap-2 absolute top-0 bottom-0 left-0 right-0 z-30">
+      <div className="absolute top-0 bottom-0 left-0 right-0 z-30 flex justify-between items-center gap-2">
         <button onClick={prev}>
-          <span className="material-icons-outlined">navigate_before</span>
+          <span className="material-icons-outlined text-gray-600 md:scale-150 md:ml-2">
+            navigate_before
+          </span>
         </button>
         <button onClick={next}>
-          <span className="material-icons-outlined">navigate_next</span>
+          <span className="material-icons-outlined text-gray-600 md:scale-150 md:mr-2">
+            navigate_next
+          </span>
         </button>
       </div>
 
       <div
         className="slider-slide flex transition-all duration-1000"
         style={{
-          width: 100 * images.length + "%",
+          width: 100 * images?.length + "%",
           transform: `translateX(-${widthImage * indexImage}%)`,
         }}
       >
-        {images.map((image) => (
+        {images?.map((image) => (
           <div
             key={image.id}
             style={{
@@ -51,4 +55,4 @@ const SliderProduct = ({ images }) => {
   );
 };
 
-export default SliderProduct;
+export default ProductSlider;

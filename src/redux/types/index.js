@@ -4,6 +4,7 @@ export const actions = {
   setCategories: "SET_PRODUCTS_CATEGORIES",
   setCart: "SET_CART",
   addToCart: "SET_ADD_TO_CART",
+  checkout: "CHECKOUT",
   setIsLoading: "SET_IS_LOADING",
   setError: "SET_ERROR",
 };

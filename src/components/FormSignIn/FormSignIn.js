@@ -1,14 +1,11 @@
 //React-hook-form
 import { useForm } from "react-hook-form";
-
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-
 //Actions
 import { signInUserThunk } from "../../redux/actions";
-
 //Components
-import Error from "../Error";
+import Error from "../Custom/Error";
 
 const FormSignIn = () => {
   //redux-hooks
@@ -24,14 +21,11 @@ const FormSignIn = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(handleUserSignIn)}
-      className="flex flex-col mb-7"
-    >
-      <label className="mb-5">
+    <form onSubmit={handleSubmit(handleUserSignIn)} className="signin-form">
+      <label className="signin-form__email">
         Enter your email
-        <div className="bg-white flex items-center gap-2 mt-2.5 p-2.5 border border-white border-opacity-10">
-          <i className="material-icons-outlined text-lg"> email </i>
+        <div className="signin-form__label">
+          <i className="material-icons-outlined"> email </i>
           <input
             type="email"
             placeholder="john@anise.com"
@@ -40,14 +34,14 @@ const FormSignIn = () => {
                 message: "This fiel is required",
               },
             })}
-            className="outline-none"
+            className="signin-form__input"
             autoComplete="off"
           />
         </div>
       </label>
       <label>
         Enter your password
-        <div className="bg-white flex items-center gap-2 mt-2.5 p-2.5 border border-white border-opacity-10">
+        <div className="signin-form__label">
           <i className="material-icons-outlined text-lg"> lock </i>
           <input
             type="password"
@@ -57,13 +51,11 @@ const FormSignIn = () => {
                 message: "This fiel is required",
               },
             })}
-            className="outline-none"
+            className="signin-form__input"
           />
         </div>
       </label>
-      <button className="bg-black text-white mt-11 p-2.5 text-sm hover:bg-opacity-90">
-        Sign In
-      </button>
+      <button className="signin-form__button">Sign In</button>
       {error && <Error errorText={error.detail} />}
     </form>
   );

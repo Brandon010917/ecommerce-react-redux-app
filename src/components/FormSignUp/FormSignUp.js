@@ -1,14 +1,11 @@
 //React-hook-form
 import { useForm } from "react-hook-form";
-
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-
 //Actions
 import { signUpUserThunk } from "../../redux/actions";
-
 //Components
-import Error from "../Error";
+import Error from "../Custom/Error";
 
 const FormSignUp = () => {
   //redux-hooks
@@ -28,19 +25,15 @@ const FormSignUp = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(handleUserSignUp)}
-      className="flex flex-col mb-7"
-    >
-      <div className="flex">
-        <label className="w-1/2 mb-5 pr-2">
+    <form onSubmit={handleSubmit(handleUserSignUp)} className="signup-form">
+      <div className="signup-form__user">
+        {/* First Name */}
+        <label>
           First name
-          <div
-            className={`bg-white flex items-center gap-2 mt-2.5 p-2.5 border border-white border-opacity-10 ${
-              errors.first_name?.message && "border-red-600"
-            }`}
-          >
-            <i className="material-icons-outlined text-lg"> person_outline </i>
+          <div className="signup-form__label">
+            <i className="material-icons-outlined signup-form__icon">
+              person_outline
+            </i>
             <input
               type="text"
               placeholder="John"
@@ -54,22 +47,25 @@ const FormSignUp = () => {
                   message: "Only letters are allowed",
                 },
               })}
-              className="w-full outline-none"
+              className="signup-form__input"
               autoComplete="off"
             />
           </div>
           {errors.first_name && (
-            <p className="text-red-600 flex items-center gap-1 mt-1 text-sm">
-              <i className="material-icons-outlined text-sm"> warning </i>
+            <p className="signup-form__error">
+              <i className="material-icons-outlined"> warning </i>
               <span> {errors.first_name.message}</span>
             </p>
           )}
         </label>
 
-        <label className="w-1/2 mb-5 pl-2">
+        {/* Last Name */}
+        <label>
           Last name
-          <div className="bg-white flex items-center gap-2 mt-2.5 p-2.5 border border-white border-opacity-10">
-            <i className="material-icons-outlined text-lg"> person_outline </i>
+          <div className="signup-form__label">
+            <i className="material-icons-outlined signup-form__icon">
+              person_outline
+            </i>
             <input
               type="text"
               placeholder="Doe"
@@ -83,23 +79,23 @@ const FormSignUp = () => {
                   message: "Only letters are allowed",
                 },
               })}
-              className="w-full outline-none"
+              className="signup-form__input"
               autoComplete="off"
             />
           </div>
           {errors.last_name && (
-            <p className="text-red-600 flex items-center gap-1 mt-1 text-sm">
-              <i className="material-icons-outlined text-sm"> warning </i>
+            <p className="signup-form__error">
+              <i className="material-icons-outlined"> warning </i>
               <span> {errors.last_name.message}</span>
             </p>
           )}
         </label>
       </div>
 
-      <label className="mb-5">
+      <label className="signup-form__email">
         Email
-        <div className="bg-white flex items-center gap-2 mt-2.5 p-2.5 border border-white border-opacity-10">
-          <i className="material-icons-outlined text-lg"> email </i>
+        <div className="signup-form__label">
+          <i className="material-icons-outlined signup-form__icon"> email </i>
           <input
             type="email"
             placeholder="john@anise.com"
@@ -109,15 +105,15 @@ const FormSignUp = () => {
                 message: "This fiel is required",
               },
             })}
-            className="outline-none"
+            className="signup-form__input"
             autoComplete="off"
           />
         </div>
       </label>
       <label>
         Password
-        <div className="bg-white flex items-center gap-2 mt-2.5 p-2.5 border border-white border-opacity-10">
-          <i className="material-icons-outlined text-lg"> lock </i>
+        <div className="signup-form__label">
+          <i className="material-icons-outlined signup-form__icon"> lock </i>
           <input
             type="password"
             placeholder="••••••••"
@@ -127,13 +123,11 @@ const FormSignUp = () => {
                 message: "This fiel is required",
               },
             })}
-            className="outline-none"
+            className="signup-form__input"
           />
         </div>
       </label>
-      <button className="bg-black text-white mt-11 p-2.5 text-sm hover:bg-opacity-90">
-        Sign Up
-      </button>
+      <button className="signup-form__button">Sign Up</button>
       {error && <Error errorText={"There is already a user with this email"} />}
     </form>
   );

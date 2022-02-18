@@ -1,16 +1,22 @@
 import { useEffect } from "react";
-
-//React.router-dom
+//Syles
+import "../styles/Home.css";
+//Images
+import ImageRing1 from "../assets/images/image-ring-1.jpg";
+import ImageRing2 from "../assets/images/image-ring-2.jpg";
+//React-router-dom
 import { Link } from "react-router-dom";
-
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-
 //Actions
 import { getProductsListThunk } from "../redux/actions";
-
 //Components
-import ProductSlider from "../components/ProductSlider";
+import ProductSlider from "../components/Custom/ProductSlider";
+import Newsletter from "../components/Custom/Newsletter";
+import Hero from "../components/Home/Hero";
+import Story from "../components/Home/Story";
+import GalleryTop from "../components/Home/GalleryTop";
+import GalleryBottom from "../components/Home/GalleryBottom";
 
 const Home = () => {
   //Redux-hooks
@@ -23,80 +29,29 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="font-literation">
-      <div className="container-content">
-        <div className="hero-container relative flex flex-col justify-end ">
-          <div className="w-full md:w-1/3">
-            <strong className="block mb-4 text-sm">NEW COLLECTION</strong>
-            <p className="mt-7 font-teimer text-2xl md:text-3xl">
-              <span>Universal — </span>
-              <Link className="underline" to="/shop">
-                Shop Now
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="home">
+      <Hero />
+      <Story />
+      <GalleryTop />
 
-      <div className="home-story">
-        <div className="container-content">
-          <div className="story-details flex flex-col items-center">
-            <div className="flex flex-col items-center gap-8 p-4 text-center md:w-1/2">
-              <p className="text-sm">
-                We create modern gold and sterling silver jewelry with a focus
-                on timeless designs, local production, and responsibly sourced
-                materials.
-              </p>
-              <button className="border-2 border-black py-2.5 px-4 font-sans hover:bg-black hover:text-white transition-colors">
-                <Link to="/about">Our Story</Link>
-              </button>
-            </div>
+      <div className="luxury">
+        <div className="grid grid-cols-2">
+          <div className="p-4 pt-0">
+            <h2 className="mb-8 font-teimer text-4xl">Essential Luxury</h2>
+            <button className="border-2 border-black py-2.5 px-4 font-sans hover:bg-black hover:text-white transition-colors">
+              <Link to="/about">Shop Rings</Link>
+            </button>
           </div>
-
-          <div className="home-gallery-top grid grid-cols-2 md:grid-cols-3">
-            <div className="col-span-1">
-              <img
-                src={require("../assets/images/image-gallery-1.jpg")}
-                alt="gallery-1"
-                className="object-cover h-full animate__animated animate__fadeIn"
-              />
+          <div className="p-4 pt-0 grid md:grid-cols-2 gap-3">
+            <div className="text-center text-sm">
+              <img src={ImageRing1} alt="ring-1" />
+              <p className="mt-2 mb-1">Maggie Ring</p>
+              <p>$150.00</p>
             </div>
-            <div className="col-span-1">
-              <img
-                src={require("../assets/images/image-gallery-2.jpg")}
-                alt="gallery-1"
-                className="object-cover h-full animate__animated animate__fadeIn"
-              />
-            </div>
-            <div className="md:col-span-1"></div>
-          </div>
-
-          <div className="luxury">
-            <div className="grid grid-cols-2">
-              <div className="p-4 pt-0">
-                <h2 className="mb-8 font-teimer text-4xl">Essential Luxury</h2>
-                <button className="border-2 border-black py-2.5 px-4 font-sans hover:bg-black hover:text-white transition-colors">
-                  <Link to="/about">Shop Rings</Link>
-                </button>
-              </div>
-              <div className="p-4 pt-0 grid md:grid-cols-2 gap-3">
-                <div className="text-center text-sm">
-                  <img
-                    src={require("../assets/images/image-ring-1.jpg")}
-                    alt="ring-1"
-                  />
-                  <p className="mt-2 mb-1">Maggie Ring</p>
-                  <p>$150.00</p>
-                </div>
-                <div className="text-center">
-                  <img
-                    src={require("../assets/images/image-ring-2.jpg")}
-                    alt="ring-2"
-                  />
-                  <p className="mt-2 mb-1">$Katey Ring</p>
-                  <p>210.00</p>
-                </div>
-              </div>
+            <div className="text-center">
+              <img src={ImageRing2} alt="ring-2" />
+              <p className="mt-2 mb-1">$Katey Ring</p>
+              <p>210.00</p>
             </div>
           </div>
         </div>
@@ -121,70 +76,16 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-3 pl-4">
-                <ProductSlider images={productsList[0]?.images} />
+                <ProductSlider images={productsList[0]?.images || []} />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="newsletter">
-        <div className="container-content">
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 md:col-span-8">
-              <h3 className="font-teimer text-3xl mb-7">Newsletter</h3>
-              <p className="text-sm">
-                Be the first to know about our new collection <br /> launches,
-                special offers & other updates.
-              </p>
-            </div>
-            <div className="col-span-12 md:col-span-4 md:p-4 pt-0 text-sm">
-              <form className="mb-4 flex flex-wrap items-center">
-                <div className="mt-4 py-2 pr-1">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="px-7 py-5"
-                  />
-                </div>
-                <div className="mt-4 py-2 pl-1">
-                  <button className="px-7 py-5 border-2 border-black hover:bg-black hover:text-white transition duration-300">
-                    Sign Up
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className="w-full border border-black border-opacity-60 mt-8 mb-4"></div>
-        </div>
-      </div>
+      <Newsletter />
 
-      <div className="home-gallery-bottom">
-        <div className="container-content">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start">
-            <img
-              src={require("../assets/images/image-gallery-3.jpg")}
-              alt="gallery-3"
-              className="w-full h-full max-h-60 md:max-h-80 object-cover"
-            />
-            <img
-              src={require("../assets/images/image-gallery-4.jpg")}
-              alt="gallery-4"
-              className="w-full h-full max-h-60 md:max-h-80 object-cover"
-            />
-            <img
-              src={require("../assets/images/image-gallery-5.jpg")}
-              alt="gallery-5"
-              className="w-full h-full max-h-60 md:max-h-80 object-cover"
-            />
-            <img
-              src={require("../assets/images/image-gallery-6.jpg")}
-              alt="gallery-6"
-              className="w-full h-full max-h-60 md:max-h-80 object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      <GalleryBottom />
     </div>
   );
 };
