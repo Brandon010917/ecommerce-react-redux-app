@@ -57,23 +57,6 @@
   font-size: 8.5vmin;
 }
 
-/* ======== Home ======== */
-
-.luxury {
-  padding-top: 6.6vmax;
-  padding-bottom: 6.6vmax;
-}
-
-.effortless-pieces {
-  padding-top: 6.6vmax;
-  padding-bottom: 6.6vmax;
-  background-image: url("./assets/images/background-hero-2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
 /* ======== Shop ======== */
 .main-shop {
   padding-top: 6.6vmax;
