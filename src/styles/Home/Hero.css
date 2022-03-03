@@ -1,0 +1,51 @@
+.hero__container {
+  padding: 0 5vw 5vw;
+  height: 78vh;
+  background-image: url("../../assets/images/background-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: 50%;
+}
+
+.hero__wrapper {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero__content {
+  width: 100%;
+}
+
+.hero__image {
+  filter: invert(0.07);
+}
+
+.hero__strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.hero__span {
+  margin-top: 30px;
+  font-family: "Teimer";
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    height: 73vh;
+  }
+
+  .hero__content {
+    width: 33%;
+  }
+
+  .hero__span {
+    font-size: 30px;
+  }
+}

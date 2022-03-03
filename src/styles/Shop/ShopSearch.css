@@ -1,0 +1,22 @@
+.shop__search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.shop__search-input {
+  padding: 1.25rem 0.625rem;
+  border: 1px solid;
+}
+
+.shop__search-btn {
+  padding: 0.625rem 1.25rem;
+  border: 2px solid rgb(0, 0, 0);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.shop__search-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}

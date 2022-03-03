@@ -1,0 +1,94 @@
+.signin {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: rgb(64, 64, 64);
+}
+
+.signin__card {
+  width: 100%;
+  max-width: 370px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+
+.signin__title {
+  margin-bottom: 20px;
+  font-family: "Teimer";
+  font-weight: 300;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.signin-test {
+  background-color: rgba(147, 197, 253, 0.7);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 0.5rem;
+}
+
+.signin-test__strong {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.signin-test__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.signin__signup {
+  text-align: center;
+}
+
+.signin__signup a {
+  text-decoration: underline;
+}
+
+/* Signin Form */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.signin-form__email {
+  margin-bottom: 20px;
+}
+
+.signin-form__label {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signin-form__input {
+  outline: none;
+}
+
+.signin-form__button {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  margin-top: 45px;
+  padding: 10px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.signin-form__button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}

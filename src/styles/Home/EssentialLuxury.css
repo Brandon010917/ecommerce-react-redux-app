@@ -1,0 +1,52 @@
+.essential-luxury {
+  padding-top: 6.6vmax;
+  padding-bottom: 6.6vmax;
+}
+
+.essential-luxury__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.essential-luxury__left,
+.essential-luxury__right {
+  padding: 1rem 0;
+}
+
+.essential-luxury__title {
+  margin-bottom: 30px;
+  font-family: "Teimer";
+  font-size: 36px;
+}
+
+.essential-luxury__button {
+  padding: 10px 1rem;
+  border: 2px solid rgb(0, 0, 0);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.essential-luxury__button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.essential-luxury__right {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.essential-luxury__card {
+  text-align: center;
+  font-size: 14px;
+}
+
+.essential-luxury__product-name {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .essential-luxury__right {
+    grid-template-columns: 1fr 1fr;
+  }
+}

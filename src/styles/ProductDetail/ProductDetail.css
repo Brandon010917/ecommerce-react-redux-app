@@ -1,0 +1,69 @@
+.product-detail {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  font-family: "Liberation Sans", sans-serif;
+}
+
+.product-detail__grid {
+  display: grid;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Column Left */
+.product-detail__left,
+.product-detail__right {
+  grid-column: 1 / -1;
+  margin-bottom: 1.25rem;
+}
+
+/* Column Right */
+.product-detail__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-detail__name {
+  margin-bottom: 1rem;
+  font-family: "Teimer", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.product-detail__price {
+  margin-bottom: 2.5rem;
+}
+
+.product-detail__description {
+  width: 70%;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .product-detail__grid {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .product-detail__left,
+  .product-detail__right {
+    grid-column: span 1;
+  }
+
+  .product-detail__right {
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .product-detail__right {
+    padding-left: 5rem;
+  }
+}

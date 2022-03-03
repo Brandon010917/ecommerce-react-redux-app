@@ -1,0 +1,42 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__info {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 30;
+  color: rgb(31 41 55);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.slider__btns {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__icon {
+  color: rgb(75, 85, 99);
+}
+
+@media screen and (min-width: 768px) {
+  .slider__icon--left {
+    transform: scale(1.5);
+    margin-left: 0.5rem;
+  }
+
+  .slider__icon--right {
+    transform: scale(1.5);
+    margin-right: 0.5rem;
+  }
+}

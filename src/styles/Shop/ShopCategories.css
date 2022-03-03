@@ -1,0 +1,19 @@
+.shop__categories {
+  margin: 4vw 0;
+}
+
+.shop__categories-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop__categories-item {
+  /* category-btn border-r */
+  padding: 0 1.5vw;
+  border-right: 1px solid;
+}
+
+.shop__categories-item:last-child {
+  border-right: 0;
+}
