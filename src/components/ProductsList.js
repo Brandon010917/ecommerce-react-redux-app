@@ -1,11 +1,11 @@
-//Redux
+// Redux
 import { useSelector } from "react-redux";
-//Components
+// Components
 import ProductItem from "./ProductItem";
 
 const ProductsList = ({ filterId }) => {
-  //Redux-hooks
-  const productsList = useSelector((state) => state.productsList);
+  // Redux-hooks
+  const { productsList } = useSelector((state) => state.products);
 
   return (
     <>

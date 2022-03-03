@@ -1,8 +1,8 @@
-//Styles
-import "../../styles/EffortlessPieces.css";
-//React-router-dom
+// Styles
+import "../../styles/Home/EffortlessPieces.css";
+// React-router-dom
 import { Link } from "react-router-dom";
-//Components
+// Components
 import ProductSlider from "../Custom/ProductSlider";
 
 const EffortlessPieces = ({ productsList }) => {
@@ -27,7 +27,7 @@ const EffortlessPieces = ({ productsList }) => {
                 </button>
               </div>
             </div>
-            <div className="effortless-pieces__rigth">
+            <div className="effortless-pieces__right">
               {productsList.length > 0 && (
                 <>
                   <ProductSlider images={productsList[0].images} />

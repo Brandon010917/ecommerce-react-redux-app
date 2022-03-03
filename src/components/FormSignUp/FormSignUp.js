@@ -1,25 +1,32 @@
-//React-hook-form
+// Icons
+import {
+  MdPersonOutline,
+  MdWarningAmber,
+  MdOutlineEmail,
+  MdLockOutline,
+} from "react-icons/md";
+// React-hook-form
 import { useForm } from "react-hook-form";
-//Redux
+// Redux
 import { useDispatch, useSelector } from "react-redux";
-//Actions
+// Actions
 import { signUpUserThunk } from "../../redux/actions";
-//Components
+// Components
 import Error from "../Custom/Error";
 
 const FormSignUp = () => {
-  //redux-hooks
-  const error = useSelector((state) => state.error);
+  // redux-hooks
+  const { error } = useSelector((state) => state.app);
   const dispatch = useDispatch();
 
-  //form-hooks
+  // form-hooks
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  //Functions
+  // Functions
   const handleUserSignUp = (user) => {
     dispatch(signUpUserThunk(user));
   };
@@ -31,9 +38,7 @@ const FormSignUp = () => {
         <label>
           First name
           <div className="signup-form__label">
-            <i className="material-icons-outlined signup-form__icon">
-              person_outline
-            </i>
+            <MdPersonOutline className="signup-form__icon" />
             <input
               type="text"
               placeholder="John"
@@ -53,7 +58,7 @@ const FormSignUp = () => {
           </div>
           {errors.first_name && (
             <p className="signup-form__error">
-              <i className="material-icons-outlined"> warning </i>
+              <MdWarningAmber />
               <span> {errors.first_name.message}</span>
             </p>
           )}
@@ -63,9 +68,7 @@ const FormSignUp = () => {
         <label>
           Last name
           <div className="signup-form__label">
-            <i className="material-icons-outlined signup-form__icon">
-              person_outline
-            </i>
+            <MdPersonOutline className="signup-form__icon" />
             <input
               type="text"
               placeholder="Doe"
@@ -85,7 +88,7 @@ const FormSignUp = () => {
           </div>
           {errors.last_name && (
             <p className="signup-form__error">
-              <i className="material-icons-outlined"> warning </i>
+              <MdWarningAmber />
               <span> {errors.last_name.message}</span>
             </p>
           )}
@@ -95,7 +98,7 @@ const FormSignUp = () => {
       <label className="signup-form__email">
         Email
         <div className="signup-form__label">
-          <i className="material-icons-outlined signup-form__icon"> email </i>
+          <MdOutlineEmail className="signup-form__icon" />
           <input
             type="email"
             placeholder="john@anise.com"
@@ -113,7 +116,7 @@ const FormSignUp = () => {
       <label>
         Password
         <div className="signup-form__label">
-          <i className="material-icons-outlined signup-form__icon"> lock </i>
+          <MdLockOutline className="signup-form__icon" />
           <input
             type="password"
             placeholder="••••••••"

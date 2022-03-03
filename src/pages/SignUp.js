@@ -1,5 +1,5 @@
 //Styles
-import "../styles/SignUp.css";
+import "../styles/SignUp/SignUp.css";
 //Video background
 import backgroundVideoSignUp from "../assets/images/background-video.mp4";
 //React-router-dom

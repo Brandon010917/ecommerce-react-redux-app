@@ -1,6 +1,6 @@
-//Images
-import "../../styles/Story.css";
-//React-router-dom
+// Images
+import "../../styles/Home/Story.css";
+// React-router-dom
 import { Link } from "react-router-dom";
 
 const Story = () => {

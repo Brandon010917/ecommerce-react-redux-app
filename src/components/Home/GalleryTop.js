@@ -1,6 +1,6 @@
-//Styles
-import "../../styles/GalleryTop.css";
-// Images
+// Styles
+import "../../styles/Home/GalleryTop.css";
+//  Images
 import Image1 from "../../assets/images/image-gallery-1.jpg";
 import Image2 from "../../assets/images/image-gallery-2.jpg";
 

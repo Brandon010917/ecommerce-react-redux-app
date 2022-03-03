@@ -1,13 +1,14 @@
-import { useEffect } from "react";
 import { useState } from "react";
+// Styles
+import "../../styles/Custom/ProductSlider.css";
+// Icon
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 const ProductSlider = ({ images }) => {
   const [indexImage, setIndexImage] = useState(0);
-  const widthImage = 100 / images.length;
+  const widthImage = 100 / images?.length;
 
-  useEffect(() => {}, []);
-
-  //Functions
+  // Functions
   const prev = () =>
     setIndexImage((prev) => (prev === 0 ? images?.length - 1 : prev - 1));
 
@@ -15,21 +16,17 @@ const ProductSlider = ({ images }) => {
     setIndexImage((prev) => (prev === images?.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="slider-container overflow-hidden relative">
-      <p className="text-gray-800 absolute top-4 right-4 z-30 text-xs">
+    <div className="slider">
+      <p className="slider__info">
         {indexImage + 1} / {images?.length}
       </p>
 
-      <div className="absolute top-0 bottom-0 left-0 right-0 z-30 flex justify-between items-center gap-2">
+      <div className="slider__btns">
         <button onClick={prev}>
-          <span className="material-icons-outlined text-gray-600 md:scale-150 md:ml-2">
-            navigate_before
-          </span>
+          <MdNavigateBefore className="slider__icon slider__icon--left" />
         </button>
         <button onClick={next}>
-          <span className="material-icons-outlined text-gray-600 md:scale-150 md:mr-2">
-            navigate_next
-          </span>
+          <MdNavigateNext className="slider__icon slider__icon--right" />
         </button>
       </div>
 

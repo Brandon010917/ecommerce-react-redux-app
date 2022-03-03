@@ -1,12 +1,9 @@
 import { useEffect } from "react";
-
-//React-router-dom
+// React-router-dom
 import { Link } from "react-router-dom";
-
-//Redux
+// Redux
 import { useDispatch, useSelector } from "react-redux";
-
-//Actions
+// Actions
 import {
   changeQuantityProductCartThunk,
   deleteProductCartThunk,
@@ -15,16 +12,16 @@ import {
 } from "../redux/actions";
 
 const Cart = () => {
-  //Redux-hooks
+  // Redux-hooks
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  //Effect
+  // Effect
   useEffect(() => {
     dispatch(getCartThunk());
   }, [dispatch]);
 
-  //Functions
+  // Functions
   const deleteProductCart = (id) => {
     dispatch(deleteProductCartThunk(id));
   };

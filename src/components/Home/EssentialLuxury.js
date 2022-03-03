@@ -1,9 +1,9 @@
-//Styles
-import "../../styles/EssentialLuxury.css";
-//Images
+// Styles
+import "../../styles/Home/EssentialLuxury.css";
+// Images
 import ImageRing1 from "../../assets/images/image-ring-1.jpg";
 import ImageRing2 from "../../assets/images/image-ring-2.jpg";
-//React-router-dom
+// React-router-dom
 import { Link } from "react-router-dom";
 
 const EssentialLuxury = () => {
@@ -16,7 +16,7 @@ const EssentialLuxury = () => {
             <Link to="/shop">Shop Rings</Link>
           </button>
         </div>
-        <div className="essential-luxury__rigth">
+        <div className="essential-luxury__right">
           <div className="essential-luxury__card">
             <img src={ImageRing1} alt="ring-1" />
             <p className="essential-luxury__product-name">Maggie Ring</p>

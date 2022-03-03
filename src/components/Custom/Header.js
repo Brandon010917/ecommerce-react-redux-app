@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-
+//Icons
+import { FaInstagram, FaPinterest, FaShoppingCart } from "react-icons/fa";
 //React-router-dom
 import { Link } from "react-router-dom";
-
 //Redux
 import { useSelector } from "react-redux";
-
 //Components
 import LinkPages from "./LinkPages";
 
@@ -67,8 +66,8 @@ const Header = () => {
         </div>
         {/* Icons */}
         <div className="text-gray-600 hidden md:flex gap-4">
-          <i className="fab fa-instagram text-xl cursor-pointer"></i>
-          <i className="fab fa-pinterest text-xl cursor-pointer"></i>
+          <FaInstagram className="text-xl cursor-pointer" />
+          <FaPinterest className="text-xl cursor-pointer" />
         </div>
         {/* Title */}
         <div className="animate__animated animate__fadeIn animate__slower w-1/2 flex flex-col items-center">
@@ -84,7 +83,7 @@ const Header = () => {
         <div className="relative left-2 ml-6 p-1">
           <button>
             <Link to="/cart">
-              <i className="fas fa-shopping-cart text-gray-600"></i>
+              <FaShoppingCart className="text-gray-600" />
             </Link>
           </button>
           <span className="absolute -top-2.5 -right-0.5 p-1 text-xs">
@@ -112,9 +111,9 @@ const Header = () => {
             <Link to="/journal">Journal</Link>
           </li>
         </ul>
-        <div className="animate__animated animate__fadeInUp animate__delay-1s text-center">
-          <i className="fab fa-instagram my-4 mx-2 text-2xl cursor-pointer"></i>
-          <i className="fab fa-pinterest my-4 mx-2 text-2xl cursor-pointer"></i>
+        <div className="animate__animated animate__fadeInUp animate__delay-1s text-center flex justify-center">
+          <FaInstagram className="my-4 mx-2 text-2xl cursor-pointer" />
+          <FaPinterest className="my-4 mx-2 text-2xl cursor-pointer" />
         </div>
       </div>
     </header>

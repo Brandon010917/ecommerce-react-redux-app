@@ -1,7 +1,6 @@
-//React-router-dom
+// React-router-dom
 import { Outlet } from "react-router-dom";
-
-//Componets
+// Componets
 import Header from "../components/Custom/Header";
 import Footer from "../components/Custom/Footer";
 

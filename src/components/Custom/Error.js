@@ -1,3 +1,5 @@
+// Icon
+import { MdWarning } from "react-icons/md";
 //Styles
 const styles = {
   color: "rgb(220, 38, 38)",
@@ -11,7 +13,7 @@ const styles = {
 const Error = ({ errorText }) => {
   return (
     <p style={styles}>
-      <i className="material-icons-sharp">warning</i>
+      <MdWarning />
       <span>{errorText}</span>
     </p>
   );

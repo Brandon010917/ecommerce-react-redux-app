@@ -1,3 +1,5 @@
+//Icons
+import { MdLockOutline, MdOutlineMail } from "react-icons/md";
 //React-hook-form
 import { useForm } from "react-hook-form";
 //Redux
@@ -9,7 +11,7 @@ import Error from "../Custom/Error";
 
 const FormSignIn = () => {
   //redux-hooks
-  const error = useSelector((state) => state.error);
+  const { error } = useSelector((state) => state.app);
   const dispatch = useDispatch();
 
   //form-hooks
@@ -25,7 +27,7 @@ const FormSignIn = () => {
       <label className="signin-form__email">
         Enter your email
         <div className="signin-form__label">
-          <i className="material-icons-outlined"> email </i>
+          <MdOutlineMail />
           <input
             type="email"
             placeholder="john@anise.com"
@@ -42,7 +44,7 @@ const FormSignIn = () => {
       <label>
         Enter your password
         <div className="signin-form__label">
-          <i className="material-icons-outlined text-lg"> lock </i>
+          <MdLockOutline className="text-lg" />
           <input
             type="password"
             placeholder="••••••••"

@@ -1,6 +1,6 @@
-//Styles
-import "../../styles/Hero.css";
-//React-router-dom
+// Styles
+import "../../styles/Home/Hero.css";
+// React-router-dom
 import { Link } from "react-router-dom";
 
 const Hero = () => {

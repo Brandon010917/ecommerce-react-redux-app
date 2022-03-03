@@ -1,10 +1,12 @@
-//Styles
-import "../styles/SignIn.css";
-//Video background
+// Styles
+import "../styles/SignIn/SignIn.css";
+// Video background
 import backgroundVideoSignIn from "../assets/images/background-video.mp4";
-//React-router-dom
+// Icons
+import { MdPersonOutline, MdLockOutline } from "react-icons/md";
+// React-router-dom
 import { Link } from "react-router-dom";
-//Components
+// Components
 import FormSignIn from "../components/FormSignIn/FormSignIn";
 
 const SignIn = () => {
@@ -15,11 +17,11 @@ const SignIn = () => {
         <div className="signin-test">
           <strong className="signin-test__strong">Test data</strong>
           <p className="signin-test__info">
-            <i className="material-icons-outlined"> person_outline </i>
+            <MdPersonOutline />
             admin@admin.com
           </p>
           <p className="signin-test__info">
-            <i className="material-icons-outlined"> lock </i>
+            <MdLockOutline />
             root
           </p>
         </div>

@@ -1,14 +1,12 @@
+// Styles
 import "./App.css";
-
-//React-ruoter-dom
+// React-ruoter-dom
 import { Routes, Route } from "react-router-dom";
 import history from "./utils/history";
 import CustomRouter from "./components/Custom/CustomRouter";
-
-//Redux
+// Redux
 import { useSelector } from "react-redux";
-
-//Pages
+// Views
 import {
   About,
   Cart,
@@ -19,25 +17,15 @@ import {
   ProductDetail,
   Shop,
 } from "./pages";
-
-/* const App = () => {
-		return (
-				<CustomRouter history={history}>
-						...
-        </CustomRouter>
-		)
-} */
-
-//Layout
+// Layout
 import MainLayout from "./layouts/MainLayout";
-
-//Components
+// Components
 import ProtectedRoutes from "./components/Custom/ProtectedRoutes";
 import Loader from "./components/Custom/Loader";
 
 function App() {
-  //Redux-hooks
-  const isLoading = useSelector((state) => state.isLoading);
+  // Redux-hooks
+  const { isLoading } = useSelector((state) => state.app);
 
   return (
     <CustomRouter history={history}>

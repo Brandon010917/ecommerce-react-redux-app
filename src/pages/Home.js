@@ -1,11 +1,9 @@
 import { useEffect } from "react";
-//Syles
-import "../styles/Home.css";
-//Redux
+// Redux
 import { useDispatch, useSelector } from "react-redux";
-//Actions
+// Actions
 import { getProductsListThunk } from "../redux/actions";
-//Components
+// Components
 import Newsletter from "../components/Custom/Newsletter";
 import Hero from "../components/Home/Hero";
 import Story from "../components/Home/Story";
@@ -15,17 +13,17 @@ import EssentialLuxury from "../components/Home/EssentialLuxury";
 import EffortlessPieces from "../components/Home/EffortlessPieces";
 
 const Home = () => {
-  //Redux-hooks
-  const productsList = useSelector((state) => state.productsList);
+  // Redux-hooks
+  const { productsList } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
-  //Effect
+  // Effect
   useEffect(() => {
     dispatch(getProductsListThunk());
   }, [dispatch]);
 
   return (
-    <div className="home">
+    <>
       <Hero />
       <Story />
       <GalleryTop />
@@ -33,7 +31,7 @@ const Home = () => {
       <EffortlessPieces productsList={productsList} />
       <Newsletter />
       <GalleryBottom />
-    </div>
+    </>
   );
 };
 

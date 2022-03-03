@@ -1,5 +1,5 @@
 //Styles
-import "../../styles/Newsletter.css";
+import "../../styles/Home/Newsletter.css";
 
 const Newsletter = () => {
   return (
@@ -13,8 +13,8 @@ const Newsletter = () => {
             special offers & other updates.
           </p>
         </div>
-        {/* Column rigth */}
-        <div className="newsletter__rigth">
+        {/* Column right */}
+        <div className="newsletter__right">
           <form className="newsletter-form">
             <div className="newsletter-form__wrapper">
               <input

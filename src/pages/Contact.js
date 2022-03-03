@@ -1,5 +1,7 @@
 import React from "react";
-//Components
+// Icons
+import { FaInstagram, FaPinterest } from "react-icons/fa";
+// Components
 import Newsletter from "../components/Custom/Newsletter";
 
 const Contact = () => {
@@ -30,8 +32,8 @@ const Contact = () => {
 
               {/* Icons */}
               <div className="text-gray-600 flex gap-4 mt-8">
-                <i className="fab fa-instagram text-xl cursor-pointer"></i>
-                <i className="fab fa-pinterest text-xl cursor-pointer"></i>
+                <FaInstagram className="text-xl cursor-pointer" />
+                <FaPinterest className="text-xl cursor-pointer" />
               </div>
             </div>
           </div>

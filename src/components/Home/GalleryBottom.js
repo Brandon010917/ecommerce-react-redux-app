@@ -1,10 +1,10 @@
-//Images
+// Styles
+import "../../styles/Home/GalleryBottom.css";
+// Images
 import Image3 from "../../assets/images/image-gallery-3.jpg";
 import Image4 from "../../assets/images/image-gallery-4.jpg";
 import Image5 from "../../assets/images/image-gallery-5.jpg";
 import Image6 from "../../assets/images/image-gallery-6.jpg";
-//Styles
-import "../../styles/GalleryBottom.css";
 
 const GalleryBottom = () => {
   return (
