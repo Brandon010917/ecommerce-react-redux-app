@@ -48,11 +48,18 @@
   padding: 10px 1rem;
   font-size: 20px;
   border: 2px solid rgb(255, 255, 255);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.effortless-pieces__button a {
+  color: rgb(255, 255, 255);
 }
 
 .effortless-pieces__button:hover {
   background-color: rgb(255, 255, 255);
+}
+
+.effortless-pieces__button:hover a {
   color: rgb(0, 0, 0);
 }
 

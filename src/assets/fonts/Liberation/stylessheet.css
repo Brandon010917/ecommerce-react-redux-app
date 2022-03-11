@@ -6,21 +6,21 @@
 }
 
 @font-face {
-  font-family: "Teimer";
+  font-family: "Liberation Sans";
   src: url("./LiberationSans-Regular.ttf"), local("LiberationSans-Regular");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Teimer";
+  font-family: "Liberation Sans";
   src: url("./LiberationSans-Bold.ttf"), local("LiberationSans-Bold");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Teimer";
+  font-family: "Liberation Sans";
   src: url("./LiberationSans-BoldItalic.ttf"),
     local("LiberationSans-BoldItalic");
   font-weight: bold;

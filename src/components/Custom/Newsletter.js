@@ -16,14 +16,14 @@ const Newsletter = () => {
         {/* Column right */}
         <div className="newsletter__right">
           <form className="newsletter-form">
-            <div className="newsletter-form__wrapper">
+            <div className="newsletter-form__wrapper newsletter-form__wrapper--input">
               <input
                 type="email"
                 placeholder="Email Address"
                 className="newsletter-form__input"
               />
             </div>
-            <div className="newsletter-form__wrapper">
+            <div className="newsletter-form__wrapper newsletter-form__wrapper--btn">
               <button className="newsletter-form__button">Sign Up</button>
             </div>
           </form>

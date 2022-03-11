@@ -8,7 +8,6 @@ import CustomRouter from "./components/Custom/CustomRouter";
 import { useSelector } from "react-redux";
 // Views
 import {
-  About,
   Cart,
   Contact,
   Home,
@@ -39,7 +38,6 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/product/:id" element={<ProductDetail />} />

@@ -1,7 +1,7 @@
 // Styles
 import "../styles/Shop/Shop.css";
 // Components
-import ProductsList from "../components/ProductsList";
+import ProductsList from "../components/Products/ProductsList";
 import ShopSearch from "../components/Shop/ShopSearch";
 import ShopCategories from "../components/Shop/ShopCategories";
 

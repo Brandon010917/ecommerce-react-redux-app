@@ -17,6 +17,7 @@
   font-family: "Teimer";
   font-size: 30px;
   margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .newsletter__left p {
@@ -28,28 +29,37 @@
 }
 
 .newsletter-form {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
   margin-bottom: 20px;
 }
 
 .newsletter-form__wrapper {
-  width: 55%;
   margin-top: 1rem;
   padding: 0.5rem 0.25rem 0.5rem 0;
+  width: 100%;
+}
+
+.newsletter-form__wrapper--input {
+  grid-column: span 8;
+}
+
+.newsletter-form__wrapper--btn {
+  grid-column: span 4;
 }
 
 .newsletter-form__input {
   width: 100%;
   padding: 20px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .newsletter-form__button {
   width: 100%;
   padding: 20px 30px;
   border: 2px solid rgb(0, 0, 0);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .newsletter-form__button:hover {
@@ -59,21 +69,44 @@
 
 .newsletter__border-bottom {
   grid-column: span 12;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgb(0 0 0);
   margin-top: 30px;
   margin-bottom: 1rem;
+  font-size: 14px;
 }
 
 @media screen and (min-width: 768px) {
-  .newsletter-form__wrapper {
-    width: 90%;
+  .newsletter__left {
+    grid-column: span 8;
   }
 
-  .newsletter__left {
+  .newsletter-form__wrapper--input {
+    grid-column: span 12;
+  }
+
+  .newsletter-form__wrapper--btn {
     grid-column: span 8;
   }
 
   .newsletter__right {
     grid-column: span 4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .newsletter__left {
+    grid-column: span 7;
+  }
+
+  .newsletter__right {
+    grid-column: span 5;
+  }
+
+  .newsletter-form__wrapper--input {
+    grid-column: span 7;
+  }
+
+  .newsletter-form__wrapper--btn {
+    grid-column: span 5;
   }
 }

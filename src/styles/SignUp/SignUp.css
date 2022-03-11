@@ -85,7 +85,7 @@
   margin-top: 45px;
   padding: 10px;
   font-size: 14px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .signup-form__button:hover {

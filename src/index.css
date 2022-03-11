@@ -1,7 +1,16 @@
-/* Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import-normalize;
+
+/* Font family */
+@import url("./assets/fonts/Teimer/stylesheet.css");
+@import url("./assets/fonts/Liberation/stylessheet.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -19,4 +28,24 @@ code {
 
 input:focus-visible {
   outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
 }

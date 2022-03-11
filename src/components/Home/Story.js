@@ -15,7 +15,7 @@ const Story = () => {
               materials.
             </p>
             <button className="story__button">
-              <Link to="/about">Our Story</Link>
+              <Link to="/">Our Story</Link>
             </button>
           </div>
         </div>

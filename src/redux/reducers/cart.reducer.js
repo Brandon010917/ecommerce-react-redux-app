@@ -5,10 +5,7 @@ const INITAL_STATE = [];
 const cartReducer = (state = INITAL_STATE, action) => {
   switch (action.type) {
     case cartActions.setCart:
-      return {
-        ...state,
-        cart: action.payload,
-      };
+      return action.payload;
 
     case cartActions.addToCart:
       return {

@@ -25,13 +25,17 @@
 }
 
 .story__button {
+  color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
   padding: 10px 1rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .story__button:hover {
   background-color: rgb(0, 0, 0);
+}
+
+.story__button:hover a {
   color: rgb(255, 255, 255);
 }
 

@@ -1,7 +1,7 @@
 // Styles
 import "../../styles/ProductDetail/RelatedProducts.css";
 // Components
-import ProductsList from "../ProductsList";
+import ProductsList from "../Products/ProductsList";
 
 const RelatedProducts = ({ productDetail }) => {
   return (

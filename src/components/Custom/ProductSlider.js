@@ -31,7 +31,7 @@ const ProductSlider = ({ images }) => {
       </div>
 
       <div
-        className="slider-slide flex transition-all duration-1000"
+        className="slider__slide"
         style={{
           width: 100 * images?.length + "%",
           transform: `translateX(-${widthImage * indexImage}%)`,
