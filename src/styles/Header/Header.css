@@ -1,0 +1,83 @@
+.header {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  font-family: "Liberation Sans", sans-serif;
+}
+
+.header__icons {
+  display: none;
+  color: rgb(75, 85, 99);
+}
+
+.header__icon {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+
+.header__info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  font-family: "Teimer", sans-serif;
+  font-size: 2.15rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
+.header__pages {
+  display: none;
+  font-family: "Liberation Sans", sans-serif;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__cart {
+  position: relative;
+  left: 0.5rem;
+  margin-left: 1.5rem;
+  padding: 0.25rem;
+}
+
+.header__cart-icon {
+  color: rgb(75, 85, 99);
+}
+
+.header__cart-number {
+  position: absolute;
+  top: -0.625rem;
+  right: -0.125rem;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+/* Navbar */
+.open-nav {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-nav {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .header__icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .header__pages {
+    display: block;
+  }
+}

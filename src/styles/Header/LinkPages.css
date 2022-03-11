@@ -1,0 +1,28 @@
+.pages {
+  margin-top: 2vw;
+}
+
+.pages__list {
+  display: flex;
+}
+
+.pages__list-item {
+  margin-left: 0.8vw;
+  margin-right: 0.8vw;
+  padding-top: 0.25rem;
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 14px;
+}
+
+.pages__list-item::first-letter {
+  text-transform: uppercase;
+}
+
+.pages__list-link {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pages__list-link--active {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}

@@ -1,0 +1,54 @@
+.contact {
+  padding-top: 5vw;
+  font-family: "Liberation Sans", sans-serif;
+}
+
+.contact__grid {
+  display: grid;
+}
+
+.contact__title {
+  font-family: "Teimer", sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 300;
+}
+
+.contact__right {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.contact__text {
+  margin-bottom: 0.875rem;
+}
+
+.contact__followers {
+  margin-top: 2rem;
+}
+
+.contact__icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: rgb(75, 85, 99);
+}
+
+.contact__icon {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__right {
+    padding-left: 1rem;
+    margin-top: 0;
+  }
+}

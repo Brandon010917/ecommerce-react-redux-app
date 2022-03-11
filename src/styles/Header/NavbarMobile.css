@@ -1,0 +1,54 @@
+.navbar-mobile {
+  background: rgb(255, 255, 255);
+}
+
+.navbar-mobile--active {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.navbar-mobile--hidden {
+  display: none;
+}
+
+.navbar-mobile__list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-mobile__list-item {
+  margin: 4.2vw 5vw;
+  font-size: 8.5vmin;
+  transform: opacity 0.3s ease;
+}
+
+.navbar-mobile__list-item::first-letter {
+  text-transform: uppercase;
+}
+
+.navbar-mobile__list-item:hover {
+  opacity: 0.6;
+}
+
+.navbar-mobile__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navbar-mobile__icon {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-mobile {
+    display: none;
+  }
+}

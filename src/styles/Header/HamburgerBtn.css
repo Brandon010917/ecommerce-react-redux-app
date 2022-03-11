@@ -1,0 +1,25 @@
+.hamburger {
+  padding: 1px 5px;
+  max-height: 35px;
+}
+
+.hamburger-box {
+  width: 35px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #7d7c78;
+  height: 1px;
+  width: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger__wrapper {
+    display: none;
+  }
+}
