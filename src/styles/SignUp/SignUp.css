@@ -35,17 +35,6 @@
   text-decoration: underline;
 }
 
-.signup__background {
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  object-fit: cover;
-  z-index: -10;
-}
-
 /* Signup Form */
 .signup-form {
   display: flex;
@@ -73,6 +62,7 @@
 .signup-form__input {
   width: 100%;
   outline: none;
+  border: none;
 }
 
 .signup-form__email {

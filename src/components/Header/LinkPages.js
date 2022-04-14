@@ -4,7 +4,7 @@ import "../../styles/Header/LinkPages.css";
 import { NavLink } from "react-router-dom";
 
 const Categories = () => {
-  const pages = ["shop", "contact", "my orders"];
+  const pages = ["shop", "contact", "orders"];
 
   return (
     <div className="pages">
@@ -17,7 +17,7 @@ const Categories = () => {
                 `pages__list-link ${isActive ? "pages__list-link--active" : ""}`
               }
             >
-              {page}
+              {page === "orders" ? "My Orders" : page}
             </NavLink>
           </li>
         ))}

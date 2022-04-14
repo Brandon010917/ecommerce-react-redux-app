@@ -8,10 +8,7 @@ const cartReducer = (state = INITAL_STATE, action) => {
       return action.payload;
 
     case cartActions.addToCart:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-      };
+      return [...state, action.payload];
 
     default:
       return state;

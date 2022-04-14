@@ -23,8 +23,6 @@ const Header = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  console.log(cart);
-
   // Effect
   useEffect(() => {
     dispatch(getCartThunk());
@@ -82,7 +80,6 @@ const Header = () => {
               <LinkPages />
             </div>
           </div>
-
           {/* Cart */}
           <div className="header__cart">
             <button>

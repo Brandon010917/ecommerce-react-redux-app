@@ -4,20 +4,21 @@ import { setError, setIsLoading } from ".";
 import axios from "axios";
 // Utils
 import { config } from "../../utils/config";
+import { sweetAlert } from "../../utils/sweetAlert";
 
 export const cartActions = {
   setCart: "SET_CART",
-  addToCart: "SET_ADD_TO_CART",
+  addToCart: "ADD_TO_CART"
 };
 
 export const setCart = (products) => ({
   type: cartActions.setCart,
-  payload: products,
+  payload: products
 });
 
 export const addToCart = (product) => ({
   type: cartActions.addToCart,
-  payload: product,
+  payload: product
 });
 
 // Thunks
@@ -41,7 +42,10 @@ export const addToCartThunk = (product) => {
         product,
         config()
       )
-      .then(({ data }) => dispatch(addToCart(data)))
+      .then(({ data }) => {
+        sweetAlert("Product added to cart");
+        dispatch(addToCart(data));
+      })
       .catch(({ response }) => dispatch(setError(response.data)))
       .finally(() => dispatch(setIsLoading(false)));
   };
@@ -85,8 +89,11 @@ export const checkoutThunk = (cart) => {
         cart,
         config()
       )
-      .then(() => dispatch(setCart([])))
-      .catch(({ response }) => dispatch(setError(response.data)))
+      .then(() => {
+        sweetAlert("Successful purchase! Thanks for buy with us");
+        dispatch(setCart([]));
+      })
+      .catch(({ response }) => dispatch(setError(response?.data)))
       .finally(() => dispatch(setIsLoading(false)));
   };
 };

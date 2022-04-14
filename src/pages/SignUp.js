@@ -1,4 +1,5 @@
 //Styles
+import "../App.css";
 import "../styles/SignUp/SignUp.css";
 //Video background
 import backgroundVideoSignUp from "../assets/images/background-video.mp4";
@@ -23,7 +24,7 @@ const SignUp = () => {
       </div>
       <video
         src={backgroundVideoSignUp}
-        className="signup__background"
+        className="background-video"
         muted
         autoPlay="autoplay"
         preload="auto"

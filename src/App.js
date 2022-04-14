@@ -15,6 +15,7 @@ import {
   SignUp,
   ProductDetail,
   Shop,
+  MyOrders
 } from "./pages";
 // Layout
 import MainLayout from "./layouts/MainLayout";
@@ -42,6 +43,7 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/orders" element={<MyOrders />} />
           </Route>
         </Route>
       </Routes>
